@@ -3,6 +3,7 @@ import PodcastGrid from "./components/Podcast.Grid.jsx";
 import { genres } from "./data.js";
 import { fetchPodcasts } from "./api/fetchPodcasts.js";
 import Header from "./components/Header.jsx";
+import { PodcastProvider } from "./context/PodcastContext.jsx";
 
 /**
  * App - The root component of the Podcast Explorer application. It handles:
@@ -10,6 +11,7 @@ import Header from "./components/Header.jsx";
  * - Managing loading and error states
  * - Rendering the podcast grid once data is successfully fetched
  * - Displaying a header and fallback UI during loading or error
+ * - Podcast Provider is centalised state management for search, filter, sorting and pagination.
  * @returns {JSX.Element} The rendered application interface
  */
 export default function App() {
@@ -41,7 +43,9 @@ export default function App() {
         )}
 
         {!loading && !error && (
-          <PodcastGrid podcasts={podcasts} genres={genres} />
+          <PodcastProvider initialPodcasts={podcasts}>
+            <PodcastGrid genres={genres}/>
+          </PodcastProvider>
         )}
       </main>
     </>
