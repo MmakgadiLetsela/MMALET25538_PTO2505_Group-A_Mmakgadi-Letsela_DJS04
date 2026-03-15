@@ -4,6 +4,7 @@ import { PodcastContext } from "../context/PodcastContext.jsx";
 import SearchBar from "./SearchBar.jsx";
 import GenreFilter from "./GenreFilter.jsx";
 import SortSelect from "./SortSelect.jsx";
+import Pagination from "./Pagination.jsx";
 
 /**
  * Displays a grid layout of podcast preview cards with search, genre filtering, sorting and pagination. 
