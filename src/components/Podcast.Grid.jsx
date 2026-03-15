@@ -17,21 +17,11 @@ import SortSelect from "./SortSelect.jsx";
  */
 export default function PodcastGrid({ genres }) {
   const {
-    page,
-    setPage,
-    totalPages,
     podcasts,
     allPodcastsCount,
   } = useContext(PodcastContext);
 
-  const handlePrevPage = () => {
-    if (page > 1) setPage(page - 1);
-  };
-
-  const handleNextPage = () => {
-    if (page < totalPages) setPage(page + 1);
-  };
-
+ 
 
 
   return (
@@ -58,29 +48,7 @@ export default function PodcastGrid({ genres }) {
       </div>
 
       {/* Pagination */}
-      {totalPages > 1 && (
-        <div className="pagination">
-          <button
-            onClick={handlePrevPage}
-            disabled={page === 1}
-            className="pagination-btn"
-          >
-            Previous
-          </button>
-
-          <span className="pagination-info">
-            Page {page} of {totalPages}
-          </span>
-
-          <button
-            onClick={handleNextPage}
-            disabled={page === totalPages}
-            className="pagination-btn"
-          >
-            Next
-          </button>
-        </div>
-      )}
+      <Pagination/>
     </div>
   );
 }
