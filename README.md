@@ -17,6 +17,7 @@ It introduces shared state management using the React Context API.
 - You can filter the podcasts according to the genres, for example history.
 - You can sort the podcasts according to the date it was last updated or the title of the podcasts.
 - You can navigate between the different pages of the app by clicking on the numeric buttons at the bottom of the page.
+- Any combination of these functionalities persist when the user does more than one.
 
 ## Acknowledements
 This project was completed by Mmakgadi Letsela for DJS04.
