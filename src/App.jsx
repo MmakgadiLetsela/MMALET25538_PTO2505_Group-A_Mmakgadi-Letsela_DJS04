@@ -37,7 +37,7 @@ export default function App() {
         {error && (
           <div className="message-container">
             <div className="error">
-              Error occurred while tyring fetching podcasts: {error}
+              Error occurred while trying fetching podcasts: {error}
             </div>
           </div>
         )}
