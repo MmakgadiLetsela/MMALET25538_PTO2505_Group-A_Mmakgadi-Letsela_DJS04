@@ -1,16 +1,29 @@
-# React + Vite
+# React Podcast App with Search, Sort, Filter & Pagination
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Project Overview
+This project is a React-based podcast browsing application that allows users to explore podcasts using powerful features such as search, sort, filter by genre, and automatic pagination. 
+It introduces shared state management using the React Context API. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
+- HTML
+- CSS
+- Javascript
+- React
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Interaction Instructions
+- You can search for a podcast by title by typing in letters included in the title.
+- You can filter the podcasts according to the genres, for example history.
+- You can sort the podcasts according to the date it was last updated or the title of the podcasts.
+- You can navigate between the different pages of the app by clicking on the numeric buttons at the bottom of the page.
 
-## Expanding the ESLint configuration
+## Acknowledements
+This project was completed by Mmakgadi Letsela for DJS04.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contact Details
+[LinkedIn](https://www.linkedin.com/in/mmakgadi-letsela)
+
+[Email](mmakgadi.letsela@gmail.com)
+
+
