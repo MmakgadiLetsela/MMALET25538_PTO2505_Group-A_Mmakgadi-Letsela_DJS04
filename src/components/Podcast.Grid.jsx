@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import PodcastCard from "./PodcastCard.jsx";
-import { PodcastContext, SORT_OPTIONS } from "../context/PodcastContext.jsx";
+import { PodcastContext } from "../context/PodcastContext.jsx";
+import SearchBar from "./SearchBar.jsx";
+import GenreFilter from "./GenreFilter.jsx";
+import SortSelect from "./SortSelect.jsx";
 
 /**
  * Displays a grid layout of podcast preview cards with search, genre filtering, sorting and pagination. 
@@ -14,12 +17,6 @@ import { PodcastContext, SORT_OPTIONS } from "../context/PodcastContext.jsx";
  */
 export default function PodcastGrid({ genres }) {
   const {
-    search,
-    setSearch,
-    sortKey,
-    setSortKey,
-    genre,
-    setGenre,
     page,
     setPage,
     totalPages,
@@ -36,46 +33,15 @@ export default function PodcastGrid({ genres }) {
   };
 
 
-  
+
   return (
     <div className="podcast-grid">
       {/* Controls */}
       <div className="controls">
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search podcasts..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="search-input"
-          />
-        </div>
-
+        <SearchBar />
         <div className="filter-container">
-          <select
-            value={genre}
-            onChange={(e) => setGenre(e.target.value)}
-            className="genre-select"
-          >
-            <option value="all">All Genres</option>
-            {genres.map((g) => (
-              <option key={g.id} value={g.id}>
-                {g.title}
-              </option>
-            ))}
-          </select>
-
-          <select
-            value={sortKey}
-            onChange={(e) => setSortKey(e.target.value)}
-            className="sort-select"
-          >
-            {SORT_OPTIONS.map((option) => (
-              <option key={option.key} value={option.key}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+          <GenreFilter genres={genres} />
+          <SortSelect />
         </div>
       </div>
 
